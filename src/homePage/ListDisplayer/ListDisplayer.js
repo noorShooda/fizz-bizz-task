@@ -4,47 +4,21 @@ import './listDisplayer.css';
 import { ListItem } from './ListItem';
 import { verifyDivisibility } from '../../helpers/helpers';
 
-export const ListDisplayer  = (props) => {
+export const ListDisplayer  = () => {
     
-    const displyFirstListOfNumbers = () => {
+    const displyListOfNumbers = ([start,end]) => {
         var list = [];
-        for(var i = 1; i <= 25; i++){
+        for(var i = start; i <= end; i++){
             const item = verifyDivisibility(i);
             list.push(item);
         }
         return(list);
     }
 
-    const displySecondListOfNumbers = () => {
-        var list = [];
-        for(var i = 26; i <= 50; i++){
-            const item = verifyDivisibility(i);
-            list.push(item);
-        }
-        return(list);
-    }
-    
-    const displyThirdListOfNumbers = () => {
-        var list = [];
-        for(var i = 51; i <= 75; i++){
-            const item = verifyDivisibility(i);
-            list.push(item);
-        }
-        return(list);
-    }
-
-    const displyForthListOfNumbers = () => {
-        var list = [];
-        for(var i = 76; i <= 100; i++){
-            const item = verifyDivisibility(i);
-            list.push(item);
-        }
-        return(list);
-    }
-    const firstList = displyFirstListOfNumbers();
-    const secondList = displySecondListOfNumbers();
-    const thirdList = displyThirdListOfNumbers();
-    const forthList = displyForthListOfNumbers();
+    const firstList = displyListOfNumbers([1,25]);
+    const secondList = displyListOfNumbers([26,50]);
+    const thirdList = displyListOfNumbers([51,75]);
+    const forthList = displyListOfNumbers([76,100]);
 
     return(
         <div className="listDisplayerStyle">
