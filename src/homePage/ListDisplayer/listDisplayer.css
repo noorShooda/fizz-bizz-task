@@ -1,3 +1,10 @@
 .listDisplayerStyle{
     float: left;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    background-color: lightcyan;
+}
+.listStyle{
+    margin: 20px;
 }
