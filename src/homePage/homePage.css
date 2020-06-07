@@ -3,7 +3,14 @@
     position: relative;
     top:0px;
     bottom:0px;
-    left:300px;
-
-    width: 325px;
+    left:220px;
+    padding: 20px; 
+}
+.buttonDiscoverStyle{
+    background-color: lightblue;
+    color: black;
+    display: inline;
+}
+.displayStyle{
+    float: left;
 }
