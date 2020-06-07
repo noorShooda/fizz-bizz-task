@@ -1,0 +1,12 @@
+.headerStyle{
+    background-color:#1d1919;
+    color : white;
+    min-width: 200px;
+    max-width: 200px;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px; 
+    text-decoration: none ; 
+    float: left;
+}
