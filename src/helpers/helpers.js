@@ -1,20 +1,32 @@
-export const divisibleByThree = (number) => {
-    if ((numbre % 3) === 0 ) {
-        return "Fizz"; 
+const divisibleByThree = (number) => {
+    if ((number % 3) === 0 ) {
+        return true; 
     }
-    return numbre;
+    return false;
 }
 
-export const divisibleByFive= (number) => {
-    if ((numbre % 5) === 0 ) {
-        return "Bizz"; 
+const divisibleByFive= (number) => {
+    if ((number % 5) === 0 ) {
+        return true; 
     }
-    return numbre;
+    return false;
 }
 
-export const divisibleByFifteen = (number) => {
-    if ((numbre % 15) === 0 ) {
-        return "FizzBizz"; 
+const divisibleByFifteen = (number) => {
+    if ((number % 15) === 0 ) {
+        return true; 
     }
-    return numbre;
+    return false;
+}
+export const verifyDivisibility = (number) => {
+    if(divisibleByFifteen(number)) {
+       return("FizzBizz"+" "+number);
+   } else if(divisibleByThree(number)){
+       return("Fizz"+" "+number);
+   } else if(divisibleByFive(number)){
+       return("Bizz"+" "+number);
+   }
+   else{
+       return(number);
+   }
 }
