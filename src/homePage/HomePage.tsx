@@ -3,22 +3,13 @@ import React , { useState } from "react";
 import { ListDisplayer } from "./ListDisplayer/ListDisplayer";
 import './homePage.css';
 
-const HomePage = () => {
+const HomePage : React.FunctionComponent = () => {
     const [isDisplayed, setIsDisplayed] = useState(false);
 
     function displayOrHide () {
-        setIsDisplayed(function(o) {
-            return !o;
+        setIsDisplayed(function(previousState) {
+            return !previousState;
         });
-    }
-
-    const getList = () => {
-        if (isDisplayed) {
-            return (<ListDisplayer/>);
-        } else {
-            return null;
-        }
-
     }
 
     return(
@@ -27,10 +18,7 @@ const HomePage = () => {
                 <h5>Fizz Bizz List : </h5>
                 <button className="buttonDiscoverStyle" onClick={displayOrHide}>{isDisplayed ? "Hide": "Discover"}</button>
             </div>
-            <div className="displayStyle">
-                {getList()}
-            </div>
-              
+                {isDisplayed && <div className="displayStyle"><ListDisplayer/></div>}
         </div>
     ); 
 }
