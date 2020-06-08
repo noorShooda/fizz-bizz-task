@@ -3,7 +3,7 @@ import React , { useState } from "react";
 import { ListDisplayer } from "./ListDisplayer/ListDisplayer";
 import './homePage.css';
 
-const HomePage = () => {
+const HomePage : React.FunctionComponent = () => {
     const [isDisplayed, setIsDisplayed] = useState(false);
 
     function displayOrHide () {
