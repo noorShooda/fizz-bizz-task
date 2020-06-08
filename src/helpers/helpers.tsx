@@ -18,15 +18,15 @@ const divisibleByFifteen = (value : number) => {
     }
     return false;
 }
-export const verifyDivisibility = (value : number) : String => {
-    if(divisibleByFifteen(value)) {
-       return("FizzBizz"+" "+value);
-   } else if(divisibleByThree(value)){
-       return("Fizz"+" "+value);
-   } else if(divisibleByFive(value)){
-       return("Bizz"+" "+value);
+export const verifyDivisibility = (numberToCheck: number) : String => {
+    if(divisibleByFifteen(numberToCheck)) {
+       return("FizzBizz " + numberToCheck);
+   } else if(divisibleByThree(numberToCheck)){
+       return("Fizz " + numberToCheck);
+   } else if(divisibleByFive(numberToCheck)){
+       return("Bizz " + numberToCheck);
    }
    else{
-       return(value.toString());
+       return(numberToCheck.toString());
    }
 }
