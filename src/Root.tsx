@@ -5,7 +5,7 @@ import HomePage from './homePage/HomePage';
 import { rootingURL } from './config/rootingURL';
 import { Header } from './header/Header';
 
-export const Root = function(){
+export const Root : React.FunctionComponent = function(){
     return(
         <BrowserRouter>
             <Header/>
