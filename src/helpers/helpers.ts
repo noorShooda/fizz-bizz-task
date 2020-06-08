@@ -1,18 +1,18 @@
-const divisibleByThree = (value : number) => {
+export const divisibleByThree = (value : number) => {
     if ((value % 3) === 0 ) {
         return true; 
     }
     return false;
 }
 
-const divisibleByFive= (value : number) => {
+export const divisibleByFive= (value : number) => {
     if ((value % 5) === 0 ) {
         return true; 
     }
     return false;
 }
 
-const divisibleByFifteen = (value : number) => {
+export const divisibleByFifteen = (value : number) => {
     if ((value % 15) === 0 ) {
         return true; 
     }
