@@ -1,3 +1,4 @@
-export const rootingURL={
-    home : "/"
+export const rootingURL = {
+    home : "/",
+    login :"/login"
 }
