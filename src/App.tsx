@@ -2,7 +2,7 @@ import React from "react";
 
 import { Root } from './Root';
 
-const App = () => {
+const App : React.FunctionComponent = () => {
   return (
     <Root/>
   );
