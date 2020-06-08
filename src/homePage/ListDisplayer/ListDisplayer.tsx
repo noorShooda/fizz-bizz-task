@@ -23,16 +23,16 @@ export const ListDisplayer : React.FunctionComponent  = () => {
     return(
         <div className="listDisplayerStyle">
             <div className="listStyle">
-                {firstList.map(x => <ListItem item={x} />)}
+                {firstList.map((x,index)=> <ListItem item={x} key={index} />)}
             </div>
             <div className="listStyle">
-            {secondList.map(x => <ListItem item={x} />)}
+            {secondList.map((x,index)=> <ListItem item={x} key={index} />)}
             </div>
             <div className="listStyle">   
-                {thirdList.map(x => <ListItem item={x} />)}
+                {thirdList.map((x,index)=> <ListItem item={x} key={index} />)}
             </div>
             <div className="listStyle">   
-                {forthList.map(x => <ListItem item={x} />)}
+                {forthList.map((x,index) => <ListItem item={x} key={index} />)}
             </div>
         </div>
     );
