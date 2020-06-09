@@ -18,7 +18,7 @@ export const divisibleByFifteen = (value : number) => {
     }
     return false;
 }
-export const verifyDivisibility = (numberToCheck: number) : String => {
+export const convertToFizzBizz = (numberToCheck: number) : String => {
     if(divisibleByFifteen(numberToCheck)) {
        return("FizzBizz " + numberToCheck);
    } else if(divisibleByThree(numberToCheck)){
