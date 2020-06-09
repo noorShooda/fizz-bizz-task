@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RiLoginCircleLine } from 'react-icons/ri';
+import { AiOutlineHome } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 import { rootingURL } from '../../config/rootingURL';
@@ -17,9 +18,13 @@ export const Navigation : React.FunctionComponent = () => {
     return(
         <ul className="listStyle">
             { isLoggedIn === "true" ? 
-            <li className="listItemStyle">
-                <Link className="headerItemStyle" to={rootingURL.home}>Home</Link>
-            </li> :
+            <div>
+                <li className="listItemStyle">
+                    <AiOutlineHome/>
+                    <Link className="headerItemStyle" to={rootingURL.home}>Home</Link>
+                </li>
+            </div>
+             :
             <li className="listItemStyle">
                 <RiLoginCircleLine/>
                 <Link className="headerItemStyle" to={rootingURL.login}>Log In</Link>
