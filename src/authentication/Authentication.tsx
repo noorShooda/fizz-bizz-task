@@ -14,15 +14,14 @@ const Authentication : React.FunctionComponent = () =>{
     localStorage.setItem('isLoggedIn','false');
 
     
-    const handleUserName = (event: ChangeEvent<HTMLInputElement>) =>{
+    const handleUserName = (event: ChangeEvent<HTMLInputElement>) => {
         setUserName(event.currentTarget.value);
     }
-    const handleUserPassword = (event: ChangeEvent<HTMLInputElement>) =>{
+    const handleUserPassword = (event: ChangeEvent<HTMLInputElement>) => {
         setUserPassword(event.currentTarget.value);
     }
     const handleLogInButton = () => {
         if((typedUserName === userName) && (typedUserPassword === userPassword)){
-            console.log("in handleLogIN");
             localStorage.setItem('isLoggedIn','true');
             history.push(rootingURL.home);
         }
