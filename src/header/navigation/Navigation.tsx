@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { rootingURL } from '../../config/rootingURL';
 import './navigation.css';
 
-export const Navigation = ()=>{
+export const Navigation : React.FunctionComponent = () => {
 
     const[isLoggedIn,setIsLoggedIn]= useState(localStorage.getItem('isLoggedIn'));
 

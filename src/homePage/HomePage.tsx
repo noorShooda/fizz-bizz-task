@@ -15,8 +15,6 @@ const HomePage : React.FunctionComponent = () => {
         });
     }
 
-    console.log("in the homepage");
-
     if(!isLoggedIn){
         return(<Redirect to={rootingURL.login}/>);
     }

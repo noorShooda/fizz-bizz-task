@@ -2,14 +2,14 @@ import React from 'react';
 
 import './listDisplayer.css';
 import { ListItem } from './ListItem';
-import { verifyDivisibility } from '../../helpers/helpers';
+import { convertToFizzBizz } from '../../helpers/helpers';
 
 export const ListDisplayer : React.FunctionComponent  = () => {
     
     const displyListOfNumbers  = (forStart : number , forEnd : number) => {
         var list : Array<String> = [];
         for(var i = forStart; i <= forEnd; i++){
-            const item : String = verifyDivisibility(i);
+            const item : String = convertToFizzBizz(i);
             list.push(item);
         }
         return(list);
